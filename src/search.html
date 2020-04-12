@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/header.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/search.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/footer.css"/>
+</head>
+
+<body>
+<div class="top">
+    <ul>
+        <li><a href="../index.html">首页</a></li>
+        <li><a href="browse.html">浏览页</a></li>
+        <li><a href="search.html"><p style="color: red">搜索页</p></a></li>
+        <li>
+            <a href="#" id="right">个人中心</a>
+            <ul>
+                <li><a href="upload.html"><img src="../img/top/upload.jpg">上传</a></li>
+                <li><a href="myphotos.html"><img src="../img/top/myphotos.jpg">我的照片</a></li>
+                <li><a href="favorite.html"><img src="../img/top/favorite.jpg">我的收藏</a></li>
+                <li><a href="login.html"><img src="../img/top/login.jpg">登录</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<br>
+
+<div class="search bar">
+    <form>
+        <input placeholder="按标题搜索" name="title" type="text">
+        <a href="#" onclick="alert('已搜索')"><button type="submit"></button></a>
+    </form>
+</div>
+<div class="search bar">
+    <form>
+        <input placeholder="按国家搜索" name="country" type="text">
+        <a href="#" onclick="alert('已搜索')"><button type="submit"></button></a>
+    </form>
+</div>
+
+<div class="mainContainer">
+    <div class="imageOversee">
+        <div class="imageDiv2">
+            <a href="detail.html">
+                <img src="../img/use/1.jpg"></a>
+        </div>
+        <div class="imagetitle">
+            <a class="text imgTitle" href="detail.html">
+                title1
+            </a>
+        </div>
+        <div class="imagedes">
+            <span class="text desc"> Yuehu Lake, West Inner Lake and Lesser South Lake. Held in the embrace of hilly peaks on three sides, this water wonderland has been an attraction for centuries and it is small wonder that it was a favourite imperial retreat. </span>
+        </div>
+    </div>
+    <div class="imageOversee">
+        <div class="imageDiv2">
+            <a href="detail.html">
+                <img src="../img/use/2.jpg"></a>
+        </div>
+        <div class="imagetitle">
+            <a class="text imgTitle" href="detail.html">
+                title2
+            </a>
+        </div>
+        <div class="imagedes">
+            <span class="text desc"> Yuehu Lake, West Inner Lake and Lesser South Lake. Held in the embrace of hilly peaks on three sides, this water wonderland has been an attraction for centuries and it is small wonder that it was a favourite imperial retreat. </span>
+        </div>
+    </div>
+    <div class="imageOversee">
+        <div class="imageDiv2">
+            <a href="detail.html">
+                <img src="../img/use/3.jpg"></a>
+        </div>
+        <div class="imagetitle">
+            <a class="text imgTitle" href="detail.html">
+                title3
+            </a>
+        </div>
+        <div class="imagedes">
+                <span class="text desc"> Yuehu Lake, West Inner Lake and Lesser South Lake. Held in the embrace of hilly peaks on three sides, this water wonderland has been an attraction for centuries and it is small wonder that it was a favourite imperial retreat. </span>
+        </div>
+    </div>
+</div>
+
+<div class="yahoo">
+    <span class="disabled">&lt; </span><span class="current">1</span>
+    <a href="#?page=2">2</a><a href="#">3</a>
+    <a href="#?page=4">4</a><a href="#">5</a>
+    <a href="#?page=6">6</a><a href="#">7</a>...<a href="#">199</a>
+    <a href="#?page=200">200</a><a href="#">
+    &gt; </a></div>
+<p></p>
+
+<footer>
+    <div class="copyright"><p>Copyright © 2019-2021 Web fundamental. All Rights Reserved. 备案号：沪BILIBILI备17307130218号-1</p></div>
+</footer>
+
+</body>
+</html>

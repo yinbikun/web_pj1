@@ -1,0 +1,67 @@
+#photo_imformation .name ,.author{
+    margin: 1em 1em 1em 0em;
+}
+.name{
+    font-family: Papyrus;
+    font-size: 25px;
+    margin-bottom: 0.5em;
+}
+.author{
+    font-family:"Brush Script MT" ;
+    margin-bottom: 0.5em;
+    font-size: 20px;
+    color: #444444;
+}
+#photo_imformation{
+    position: absolute;
+    left: 6%;
+    top: 0%;
+    min-width: 900px;
+    width: 70%;
+    /*padding: 1em 1em 1em 1em;*/
+}
+#photo_imformation #introduction{
+    position: absolute;
+    left: 38%;
+    top: 100%;
+    font-family: "Apple Chancery";
+}
+.price{
+    font-family: "Bangla MN";
+}
+.button1{
+    width: 200px;
+    height: 40px;
+}
+
+
+#photo_imformation table{
+    border: gray;
+    border-style: solid;
+    margin-top:1em ;
+    min-width: 500px;
+}
+#photo_imformation table caption{
+    height: 25px;
+    background-color:gray;
+    padding: 1em 1em 1em 1em;
+}
+#photo_imformation table tr td{
+
+    height: 30px;
+    text-align: left;
+}
+
+#img_box{
+    position: absolute;
+
+}
+#init_img_box{
+    width: 350px;
+    height: 550px;
+    overflow: hidden;
+}
+#init_img_box img{
+    width: 350px;
+    height: 100%;
+}

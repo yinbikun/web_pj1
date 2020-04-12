@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>browse</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/header.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/browse.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/footer.css"/>
+</head>
+<body>
+<div class="top">
+    <ul>
+        <li><a href="../index.html">首页</a></li>
+        <li><a href="browse.html"><p style="color: red">浏览页</p></a></li>
+        <li><a href="search.html">搜索页</a></li>
+        <li>
+            <a href="#" id="right">个人中心</a>
+            <ul>
+                <li><a href="upload.html"><img src="../img/top/upload.jpg">上传</a></li>
+                <li><a href="myphotos.html"><img src="../img/top/myphotos.jpg">我的照片</a></li>
+                <li><a href="favorite.html"><img src="../img/top/favorite.jpg">我的收藏</a></li>
+                <li><a href="login.html"><img src="../img/top/login.jpg">登录</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<br>
+
+<div class="aside">
+    <div class="search">
+        <p>Search photos</p>
+        <div class="searchform">
+            <input type="text" name="keyword">
+            <input type="submit" name="search" value="搜索" onclick="alert('已搜索')">
+        </div>
+    </div>
+    <div class="hotcity">
+        <p>热门国家快速浏览</p>
+        <a href="#" onclick="alert('已搜索')">China</a>
+        <a href="#" onclick="alert('已搜索')">America</a>
+        <a href="#" onclick="alert('已搜索')">Japan</a>
+        <a href="#" onclick="alert('已搜索')">Italy</a>
+        <a href="#" onclick="alert('已搜索')">China</a>
+    </div>
+    <div class="hotcity">
+        <p>热门城市快速浏览</p>
+        <a href="#" onclick="alert('已搜索')">Beijing</a>
+        <a href="#" onclick="alert('已搜索')">Shanghai</a>
+        <a href="#" onclick="alert('已搜索')">Paris</a>
+        <a href="#" onclick="alert('已搜索')">New York</a>
+        <a href="#" onclick="alert('已搜索')">Tokyo</a>
+    </div>
+    <div class="hotcity">
+        <p>热门风景</p>
+        <a href="#" onclick="alert('已搜索')">History</a>
+        <a href="#" onclick="alert('已搜索')">Culture</a>
+        <a href="#" onclick="alert('已搜索')">Scenery</a>
+        <a href="#" onclick="alert('已搜索')">Building</a>
+        <a href="#" onclick="alert('已搜索')">Culture</a>
+    </div>
+</div>
+
+<div class="content">
+    <div class="main">
+        <p>筛选页面</p>
+        <div class="filterform">
+            <select name="theme" class="theme" >
+                <option value="" disabled selected hidden>根据风格筛选</option>
+                <option>Scenery</option>
+                <option>History</option>
+                <option>Culture</option>
+                <option>Portrait</option>
+            </select>
+            <select name="country" class="country" id="country" onchange="func1(this)">
+                <option disabled selected hidden>根据国家筛选</option>
+            </select>
+            <select name="city" class="city" id="city">
+                <option disabled selected hidden>根据城市筛选</option>
+            </select>
+            <button class="button" onclick="alert('已筛选')"><span>筛选</span></button>
+        </div>
+        <script>
+            data = {"China":["shanghai","beijing","chengdu","tianjin"],
+                "Japan":["Tokyo","Osaka","Kamakura"],
+                "America":["New York","San Francisco","Washington"],
+                "Italian":["Roma","Milan","Florence"]};
+            var pro  = document.getElementById("country");
+            var city = document.getElementById("city");
+
+            for (var i in data){
+                var option_pro = document.createElement("option");
+                option_pro.innerHTML=i;
+                pro.appendChild(option_pro);
+            }
+            function func1(self){
+                //console.log((self.options[self.selectedIndex]).innerHTML);
+                var choice = (self.options[self.selectedIndex]).innerHTML;
+
+                city.options.length=0;
+
+                for (var i in data[choice]){
+                    var option_city = document.createElement("option");
+                    option_city.innerHTML = data[choice][i];
+                    city.appendChild(option_city);
+                }
+            }
+        </script>
+        <div class="imgcontent">
+            <a class="picture" href="detail.html"><img src="../img/browse/1.jpg"></a>
+            <a class="picture" href="detail.html"><img src="../img/browse/2.jpg"></a>
+            <a class="picture" href="detail.html"><img src="../img/browse/3.jpg"></a>
+            <a class="picture" href="detail.html"><img src="../img/browse/4.jpg"></a>
+            <a class="picture" href="detail.html"><img src="../img/browse/5.jpg"></a>
+            <a class="picture" href="detail.html"><img src="../img/browse/6.jpg"></a>
+            <a class="picture" href="detail.html"><img src="../img/browse/7.jpg"></a>
+            <a class="picture" href="detail.html"><img src="../img/browse/8.jpg"></a>
+            <a class="picture" href="detail.html"><img src="../img/browse/9.jpg"></a>
+            <a class="picture" href="detail.html"><img src="../img/browse/10.jpg"></a>
+            <a class="picture" href="detail.html"><img src="../img/browse/11.jpg"></a>
+            <a class="picture" href="detail.html"><img src="../img/browse/12.jpg"></a>
+        </div>
+    </div>
+</div>
+
+<div class="yahoo">
+    <span class="disabled">&lt; </span><span class="current">1</span>
+    <a href="#?page=2">2</a><a href="#">3</a>
+    <a href="#?page=4">4</a><a href="#">5</a>
+    <a href="#?page=6">6</a><a href="#">7</a>...<a href="#">199</a>
+    <a href="#?page=200">200</a><a href="#">
+    &gt; </a></div>
+<p></p>
+
+
+<footer>
+    <div class="copyright"><p>Copyright © 2019-2021 Web fundamental. All Rights Reserved. 备案号：沪BILIBILI备17307130218号-1</p></div>
+</footer>
+</body>
+</html>

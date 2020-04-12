@@ -1,0 +1,304 @@
+/*左边栏*/
+.aside{
+    text-indent: 30px;
+    display: block;
+    font-size: 16px;
+    float: left;
+    width:25%;
+}
+.search,.hotcity{
+    margin: 20px 20px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: grey;
+    border-radius: 5px;
+}
+.aside a{
+    text-decoration: none;
+}
+.aside a:hover{
+    color:grey;
+}
+.search{
+    height:6em;
+}
+.search p{
+    line-height: 2.5em;
+    color:grey;
+    background-color: rgb(226, 223, 223);
+    height: 3em;
+    border-bottom: solid 1px grey;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.searchform{
+    height: 3em;
+}
+.searchform input[type="text"]{
+    padding-left: 10px;
+    float: left;
+    box-sizing : border-box;
+    width: calc(100% - 3.5em);
+    height: 100%;
+    border-style: none;
+    border-bottom-left-radius: 5px;
+    border-right: grey solid 1px;
+    border-bottom: grey solid 1px;
+}
+.searchform input[type="submit"]{
+    cursor: pointer;
+    margin:0.5em 0.5em;
+    float: right;
+    width:32px;
+    height:32px;
+    border:none;
+}
+.hotcity,.hotcountry{
+    height:calc(18em + 5px);
+}
+.hotcity a,.hotcity p{
+    line-height: 2.5em;
+    width: 100%;
+    height:3em;
+    float: left;
+}
+.hotcity a{
+    text-align:left;
+    color: dodgerblue;
+    border-top: solid 1px grey;
+}
+.hotcity p{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color:grey;
+    background-color: #eeeeee;
+}
+
+/*右边显示栏*/
+.content{
+    width: 74vw;
+    text-indent: 30px;
+    display: block;
+    font-size: 16px;
+    float: right;
+}
+.main{
+    margin:20px 20px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: grey;
+    border-radius: 5px;
+}
+select{
+    float: left;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 10px 1%;
+    width: 25%;
+    border:solid 1px grey ;
+    border-radius: 5px;
+    padding-left: 20px;
+    height:4em;
+}
+select option{
+    font-size: 24px;
+}
+.content div p{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color:#eeeeee;
+    color:grey ;
+    height: 3em;
+    line-height: 2.5em;
+    border-bottom: solid 1px grey;
+}
+.filterform{
+    text-indent:0;
+    padding:10px 10px;
+    border-bottom: solid 1px grey;
+}
+.button{
+    display: inline-block;
+    border: none;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #3762bc;
+    width:15%;
+    margin: 10px 10px;
+    height:64px;
+}
+.button span {
+    font-size:24px;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+.button span:after {
+    position: absolute;
+    opacity: 0;
+    top: -2px;
+    right: -20px;
+}
+.button:hover span {
+    padding-right: 15%;
+}
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+.imgcontent{
+    text-indent: 0;
+}
+.picture img{
+    margin:1vw 1vw; /*适应性模式*/
+    width:15vw;
+    height:15vw;
+    object-fit: cover;
+}
+
+/*响应式布局自适应大小*/
+@media only screen and ( max-width:1000px){
+    .search p,.searchform,.hotcity a,.hotcity p,.content div p{
+        height:2em;
+        line-height: 2em;
+    }
+    .aside{
+        text-indent: 10px;
+    }
+    .search,.hotcity{
+        margin-right: 0;
+    }
+    .search{
+        height: 4em;
+    }
+    .searchform input[type="text"]{
+        width: calc(100% - 2.5em);
+    }
+    .searchform input[type="submit"]{
+        margin:0;
+        width:32px;
+        height:32px;
+    }
+    .hotcity,.hotcountry{
+        height:calc(12em + 5px);
+    }
+    .content{
+        width: 76vw;
+        text-indent: 20px;
+    }
+    select{
+        width: 48%;
+        height:3em;
+    }
+    .button{
+        width: 48%;
+        height: 48px;
+        margin: 10px 1%;
+    }
+    .button span{
+        font-size: 16px;
+    }
+    .picshow img{
+        width:21vw;
+        height:21vw;
+    }
+    .picshow:last-child{
+        display: none;
+    }
+}
+@media only screen and ( max-width:750px){
+    .picshow img{
+        width:32vw;
+        height:32vw;
+    }
+    .picshow:last-child{
+        display: block;
+    }
+}
+@media only screen and ( max-width:600px){
+    .aside{
+        width: 100%;
+    }
+    .search,.hotcity,.main{
+        margin:10px 10px;
+    }
+    .content{
+        width: 100%;
+    }
+    .picshow img{
+        width:calc(98vw - 20px);
+        height:calc(98vw - 20px);
+    }
+    .picshow:last-child{
+        display: block;
+    }
+}
+
+/*页码样式*/
+div.yahoo{
+    padding-right:3px;
+    padding-left:3px;
+    padding-bottom:3px;
+    margin:3px;
+    padding-top:3px;
+    text-align:center
+}
+div.yahoo a{
+    border-right:#fff 1px solid;
+    padding-right:5px;
+    border-top:#fff 1px solid;
+    padding-left:5px;
+    padding-bottom:2px;
+    margin:2px;
+    border-left:#fff 1px solid;
+    color:#000099;
+    padding-top:2px;
+    border-bottom:#fff 1px solid;
+    text-decoration:underline
+}
+div.yahoo a:hover{
+    border-right:#000099 1px solid;
+    border-top:#000099 1px solid;
+    border-left:#000099 1px solid;
+    color:#000;
+    border-bottom:#000099 1px solid
+}
+div.yahoo a:active{
+    border-right:#000099 1px solid;
+    border-top:#000099 1px solid;
+    border-left:#000099 1px solid;
+    color:#f00;
+    border-bottom:#000099 1px solid
+}
+div.yahoo span.current{
+    border-right:#fff 1px solid;
+    padding-right:5px;
+    border-top:#fff 1px solid;
+    padding-left:5px;
+    font-weight:bold;
+    padding-bottom:2px;
+    margin:2px;
+    border-left:#fff 1px solid;
+    color:#000;
+    padding-top:2px;
+    border-bottom:#fff 1px solid;
+    background-color:#fff
+}
+div.yahoo span.disabled{
+    border-right:#eee 1px solid;
+    padding-right:5px;
+    border-top:#eee 1px solid;
+    padding-left:5px;
+    padding-bottom:2px;
+    margin:2px;
+    border-left:#eee 1px solid;
+    color:#ddd;
+    padding-top:2px;
+    border-bottom:#eee 1px solid
+}

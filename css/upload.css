@@ -1,0 +1,147 @@
+#imgPreview {
+    width: 40%;
+    height: 180px;
+    margin: 10px auto 0px auto;
+    border: 1px solid black;
+    text-align: center;
+}
+#prompt3 {
+    width: 100%;
+    height: 180px;
+    text-align: center;
+    position: relative;
+}
+#imgSpan {
+    position: absolute;
+    top: 60px;
+    left: 40px;
+}
+.filepath {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+#img3 {
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.content{
+    width: 100vw;
+    text-indent: 30px;
+    display: block;
+    font-size: 16px;
+    align-content: center;
+}
+.main{
+    margin:20px 20px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: grey;
+    border-radius: 5px;
+}
+select option{
+    font-size: 24px;
+}
+.content div p{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color:#eeeeee;
+    color:grey ;
+    height: 3em;
+    line-height: 2.5em;
+    border-bottom: solid 1px grey;
+}
+.filterform{
+    text-indent:0;
+    padding:10px 10px;
+    border-bottom: solid 1px grey;
+}
+.imgcontent{
+    text-indent: 0;
+}
+.picture img{
+    margin:1vw 1vw; /*适应性模式*/
+    width:15vw;
+    height:15vw;
+    object-fit: cover;
+}
+
+/*响应式布局自适应大小*/
+@media only screen and ( max-width:1000px){
+    .search p,.content div p{
+        height:2em;
+        line-height: 2em;
+    }
+    .aside{
+        text-indent: 10px;
+    }
+    .search{
+        margin-right: 0;
+    }
+    .search{
+        height: 4em;
+    }
+    .content{
+        width: 76vw;
+        text-indent: 20px;
+    }
+    select{
+        width: 48%;
+        height:3em;
+    }
+    .button{
+        width: 48%;
+        height: 48px;
+        margin: 10px 1%;
+    }
+    .button span{
+        font-size: 16px;
+    }
+    .picshow img{
+        width:21vw;
+        height:21vw;
+    }
+    .picshow:last-child{
+        display: none;
+    }
+}
+@media only screen and ( max-width:750px){
+    .picshow img{
+        width:32vw;
+        height:32vw;
+    }
+    .picshow:last-child{
+        display: block;
+    }
+}
+@media only screen and ( max-width:600px){
+    .aside{
+        width: 100%;
+    }
+    .search,.hotcity,.main{
+        margin:10px 10px;
+    }
+    .content{
+        width: 100%;
+    }
+}
+.input{
+    position: relative;
+    opacity: 1;
+    height: 2rem;
+    width: 100%;
+    margin: 0.2rem 0;
+}
+.inputtext{
+    height: 1.5rem;
+    width: 80%;
+    margin: 0 10%;
+}
+.button{
+    margin: 2rem 35%;
+    width: 20%;
+    height: 3.5rem;
+    border-radius: 3rem;
+}
